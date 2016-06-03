@@ -1,0 +1,13 @@
+//
+// Layout and UI
+// --------------------------------------------------
+.main-container {
+	height: 100%;
+	width: 100%;
+	position: relative;
+    .layout {
+        position: absolute;
+        background-color: $color_1;
+        @extend %absolute-center;
+    }
+}
