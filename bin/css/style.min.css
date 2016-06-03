@@ -22,10 +22,10 @@ html {
 
 body {
   height: 100%;
-  background-color: #2F313D;
+  background-color: #1B2128;
   font-family: "Lato", sans-serif;
   font-weight: 200;
-  color: #F7F6F5;
+  color: #F6F5F5;
 }
 
 a {
@@ -84,7 +84,12 @@ ul {
 }
 .main-container .layout {
   position: absolute;
-  background-color: #ED553D;
+  background-color: #394753;
+}
+.main-container .layout input {
+  background-color: #1B2128;
+  border: none;
+  color: #3BC26B;
 }
 
 /* Landscape phones and down */

@@ -1,13 +1,10 @@
 section.container.layout#default-layout
   .row.text-center
-    .seven.columns
-      h2 arca
-      <label for="exampleEmailInput">width</label>
-      <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="exampleEmailInput">
-      <label for="exampleEmailInput">height</label>
-      <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="exampleEmailInput">
-      <label for="exampleEmailInput">width</label>
-      <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="exampleEmailInput">
-      <label for="exampleEmailInput">height</label>
-      <input class="u-full-width" type="text" placeholder="test@mailbox.com" id="exampleEmailInput">
-      
+    .twelve.columns
+      .row
+        .one-half.column
+            input(type='text',placeholder='1920',id='w1',name='w1')
+            input(type='text',placeholder='1080',id='w1',name='h1')
+        .one-half.column
+            input(type='text',id='w2',name='w2')
+            input(type='text',id='h2',name='h2')

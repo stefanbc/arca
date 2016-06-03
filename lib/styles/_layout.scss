@@ -9,5 +9,10 @@
         position: absolute;
         background-color: $color_1;
         @extend %absolute-center;
+        input {
+            background-color: $color_0;
+            border: none;
+            color: $color_3;
+        }
     }
 }
