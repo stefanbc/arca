@@ -8,7 +8,7 @@ module.exports = function(grunt) {
         clean: {
             build: {
                 src: [
-                    'bin/css/style.min.css',
+                    'bin/css/*',
                     'bin/js/app.min.js'
                 ]
             },
@@ -32,7 +32,7 @@ module.exports = function(grunt) {
                     sourcemap : 'none'
                 },
                 files: {
-                    'bin/css/style.min.css' : 'lib/style/index.scss'
+                    'bin/css/style.min.css' : 'lib/styles/index.scss'
                 }
             },
             dev: {
@@ -40,7 +40,7 @@ module.exports = function(grunt) {
                     style     : 'expanded'
                 },
                 files: {
-                    'bin/css/style.min.css' : 'lib/style/index.scss'
+                    'bin/css/style.min.css' : 'lib/styles/index.scss'
                 }
             }
         },
@@ -84,9 +84,8 @@ module.exports = function(grunt) {
             files: [
                 'lib/helpers/*.coffee',
                 'lib/controllers/*.coffee',
-                'lib/style/*.scss',
-                'lib/views/*.jade',
-                'lib/views/layouts/*.jade'
+                'lib/styles/*.scss',
+                'lib/views/*.jade'
             ],
             tasks: ['clean:build', 'jade', 'sass:dev', 'coffee', 'uglify']
         }
