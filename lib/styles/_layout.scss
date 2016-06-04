@@ -8,11 +8,30 @@
     .layout {
         position: absolute;
         background-color: $color_1;
+        box-shadow: 1px 1px 15px 4px $color_3;
+        min-height: 480px;
+        max-width: 570px;
+        padding: 20px;
         @extend %absolute-center;
         input {
-            background-color: $color_0;
+            background-color: $color_1;
             border: none;
-            color: $color_3;
+            border-bottom: 2px solid $color_3;
+            border-radius: 0;
+            color: $color_2;
+        }
+        #calculator-wrapper {
+            position: relative;
+            #info-button {
+                position: absolute;
+                top: 15px;
+                right: 0;
+                font-size: 32px;
+                cursor: pointer;
+            }
+        }
+        #info-wrapper {
+            display: none;
         }
     }
 }

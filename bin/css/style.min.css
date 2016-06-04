@@ -22,10 +22,10 @@ html {
 
 body {
   height: 100%;
-  background-color: #1B2128;
+  background-color: #90A3AD;
   font-family: "Lato", sans-serif;
   font-weight: 200;
-  color: #F6F5F5;
+  color: #83959F;
 }
 
 a {
@@ -84,12 +84,31 @@ ul {
 }
 .main-container .layout {
   position: absolute;
-  background-color: #394753;
+  background-color: #ECECEC;
+  box-shadow: 1px 1px 15px 4px #646A6E;
+  min-height: 480px;
+  max-width: 570px;
+  padding: 20px;
 }
 .main-container .layout input {
-  background-color: #1B2128;
+  background-color: #ECECEC;
   border: none;
-  color: #3BC26B;
+  border-bottom: 2px solid #646A6E;
+  border-radius: 0;
+  color: #83959F;
+}
+.main-container .layout #calculator-wrapper {
+  position: relative;
+}
+.main-container .layout #calculator-wrapper #info-button {
+  position: absolute;
+  top: 15px;
+  right: 0;
+  font-size: 32px;
+  cursor: pointer;
+}
+.main-container .layout #info-wrapper {
+  display: none;
 }
 
 /* Landscape phones and down */
