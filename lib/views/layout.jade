@@ -4,12 +4,15 @@ section.container.layout#default-layout
       h2 arca
       span.fa.fa-question#info-button
       .row
-        .one-half.column.text-center
-          input(type='text',placeholder='1920',id='w1',name='w1')
-          input(type='text',placeholder='1080',id='w1',name='h1')
-        .one-half.column.text-center
-          input(type='text',id='w2',name='w2')
-          input(type='text',id='h2',name='h2')
+        .four.columns.text-center
+          input(type='text',name='w1',class='u-full-width',id='w1',placeholder='1920')
+          input(type='text',name='h1',class='u-full-width',id='h1',placeholder='1080')
+        .four.columns.text-center
+          span.fa.fa-equal#equal-sign
+            | =
+        .four.columns.text-center
+          input(type='text',name='w2',class='u-full-width',id='w2')
+          input(type='text',name='h2',class='u-full-width',id='h2')
       .row
         .twelve.columns
           #aspect-ratio-wrapper

@@ -6,7 +6,7 @@ a {
   transition: all 0.5s ease;
 }
 
-.main-container .layout {
+.main-container .layout, .main-container .layout #calculator-wrapper #equal-sign {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -86,9 +86,8 @@ ul {
   position: absolute;
   background-color: #ECECEC;
   box-shadow: 1px 1px 15px 4px #646A6E;
-  min-height: 480px;
   max-width: 570px;
-  padding: 20px;
+  padding: 40px;
 }
 .main-container .layout input {
   background-color: #ECECEC;
@@ -96,6 +95,7 @@ ul {
   border-bottom: 2px solid #646A6E;
   border-radius: 0;
   color: #83959F;
+  margin-bottom: 30px;
 }
 .main-container .layout #calculator-wrapper {
   position: relative;
@@ -107,8 +107,14 @@ ul {
   font-size: 32px;
   cursor: pointer;
 }
+.main-container .layout #calculator-wrapper #equal-sign {
+  font-size: 32px;
+}
 .main-container .layout #info-wrapper {
   display: none;
+}
+.main-container .layout footer {
+  padding: 40px 0 0;
 }
 
 /* Landscape phones and down */
