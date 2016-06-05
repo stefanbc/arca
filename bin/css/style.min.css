@@ -6,6 +6,15 @@ a {
   transition: all 0.5s ease;
 }
 
+.main-container .layout #calculator-wrapper #equal-sign {
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+  -moz-transform: translateX(-50%);
+  -o-transform: translateX(-50%);
+  -ms-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
 .main-container .layout .input-wrapper label {
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -94,7 +103,7 @@ ul {
 .main-container .layout {
   position: absolute;
   background-color: #ECECEC;
-  box-shadow: 1px 1px 15px 4px #646A6E;
+  box-shadow: 1px 1px 15px 0 #646A6E;
   max-width: 570px;
   padding: 40px 40px 25px;
 }
@@ -127,11 +136,27 @@ ul {
   padding-left: 10px;
   margin: 0;
 }
+.main-container .layout #calculator-wrapper {
+  position: relative;
+}
+.main-container .layout #calculator-wrapper #equal-sign {
+  position: absolute;
+  top: 25%;
+  font-size: 32px;
+}
+.main-container .layout #calculator-wrapper #original-values .input-wrapper {
+  margin-right: 50px;
+}
+.main-container .layout #calculator-wrapper #new-values .input-wrapper {
+  margin-left: 50px;
+}
 .main-container .layout #info-wrapper {
   display: none;
+  min-height: 200px;
+  max-height: 200px;
 }
 .main-container .layout footer {
-  padding: 40px 0 0;
+  padding: 64px 0 0;
 }
 
 /* Landscape phones and down */

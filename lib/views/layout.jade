@@ -2,18 +2,19 @@ section.container.layout#default-layout
   header.row
     .twelve.columns
       h2 arca
-      span.fa.fa-question#info-button
+      span.fa.fa-question#info-button(data-view="#calculator-wrapper")
   .row#calculator-wrapper
     .twelve.columns
+      span#equal-sign =
       .row
-        .one-half.column.text-center
+        .one-half.column.text-center#original-values
           .input-wrapper
             label(for='w1') w1
             input(type='text',name='w1',class='u-full-width',id='w1',placeholder='1920')
           .input-wrapper
             label(for='h1') h1
             input(type='text',name='h1',class='u-full-width',id='h1',placeholder='1080')
-        .one-half.column.text-center
+        .one-half.column.text-center#new-values
           .input-wrapper
             label(for='w2') w2
             input(type='text',name='w2',class='u-full-width',id='w2')
@@ -26,7 +27,6 @@ section.container.layout#default-layout
             | Current aspect ratio: #[span#aspect-ratio-suggestion]
   .row#info-wrapper
     .twelve.columns
-      h2 arca
       h5 a simple aspect ratio calculator
       p Use the form to calculate the missing value for a particular aspect ratio.
   footer.row.text-center#copy
