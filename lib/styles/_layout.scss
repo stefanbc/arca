@@ -10,18 +10,11 @@
         background-color: $color_1;
         box-shadow: 1px 1px 15px 4px $color_3;
         max-width: 570px;
-        padding: 40px;
+        padding: 40px 40px 25px;
         @extend %absolute-center;
-        input {
-            background-color: $color_1;
-            border: none;
-            border-bottom: 2px solid $color_3;
-            border-radius: 0;
-            color: $color_2;
-            margin-bottom: 30px;
-        }
-        #calculator-wrapper {
+        header {
             position: relative;
+            margin-bottom: 25px;
             #info-button {
                 position: absolute;
                 top: 15px;
@@ -29,9 +22,24 @@
                 font-size: 32px;
                 cursor: pointer;
             }
-            #equal-sign {
-                font-size: 32px;
-                @extend %absolute-center;
+        }
+        .input-wrapper {
+            position: relative;
+            margin-bottom: 50px;
+            padding-left: 25px;
+            label {
+                position: absolute;
+                left: 0;
+                @extend %absolute-vertical-center;
+            }
+            input {
+                background-color: $color_1;
+                border: none;
+                border-bottom: 2px solid $color_4;
+                border-radius: 0;
+                color: $color_2;
+                padding-left: 10px;
+                margin: 0;
             }
         }
         #info-wrapper {

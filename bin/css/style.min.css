@@ -6,7 +6,16 @@ a {
   transition: all 0.5s ease;
 }
 
-.main-container .layout, .main-container .layout #calculator-wrapper #equal-sign {
+.main-container .layout .input-wrapper label {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  -o-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.main-container .layout {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -87,28 +96,36 @@ ul {
   background-color: #ECECEC;
   box-shadow: 1px 1px 15px 4px #646A6E;
   max-width: 570px;
-  padding: 40px;
+  padding: 40px 40px 25px;
 }
-.main-container .layout input {
-  background-color: #ECECEC;
-  border: none;
-  border-bottom: 2px solid #646A6E;
-  border-radius: 0;
-  color: #83959F;
-  margin-bottom: 30px;
-}
-.main-container .layout #calculator-wrapper {
+.main-container .layout header {
   position: relative;
+  margin-bottom: 25px;
 }
-.main-container .layout #calculator-wrapper #info-button {
+.main-container .layout header #info-button {
   position: absolute;
   top: 15px;
   right: 0;
   font-size: 32px;
   cursor: pointer;
 }
-.main-container .layout #calculator-wrapper #equal-sign {
-  font-size: 32px;
+.main-container .layout .input-wrapper {
+  position: relative;
+  margin-bottom: 50px;
+  padding-left: 25px;
+}
+.main-container .layout .input-wrapper label {
+  position: absolute;
+  left: 0;
+}
+.main-container .layout .input-wrapper input {
+  background-color: #ECECEC;
+  border: none;
+  border-bottom: 2px solid #B3B3B3;
+  border-radius: 0;
+  color: #83959F;
+  padding-left: 10px;
+  margin: 0;
 }
 .main-container .layout #info-wrapper {
   display: none;

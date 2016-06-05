@@ -1,22 +1,29 @@
 section.container.layout#default-layout
-  .row#calculator-wrapper
+  header.row
     .twelve.columns
       h2 arca
       span.fa.fa-question#info-button
+  .row#calculator-wrapper
+    .twelve.columns
       .row
-        .four.columns.text-center
-          input(type='text',name='w1',class='u-full-width',id='w1',placeholder='1920')
-          input(type='text',name='h1',class='u-full-width',id='h1',placeholder='1080')
-        .four.columns.text-center
-          span.fa.fa-equal#equal-sign
-            | =
-        .four.columns.text-center
-          input(type='text',name='w2',class='u-full-width',id='w2')
-          input(type='text',name='h2',class='u-full-width',id='h2')
+        .one-half.column.text-center
+          .input-wrapper
+            label(for='w1') w1
+            input(type='text',name='w1',class='u-full-width',id='w1',placeholder='1920')
+          .input-wrapper
+            label(for='h1') h1
+            input(type='text',name='h1',class='u-full-width',id='h1',placeholder='1080')
+        .one-half.column.text-center
+          .input-wrapper
+            label(for='w2') w2
+            input(type='text',name='w2',class='u-full-width',id='w2')
+          .input-wrapper
+            label(for='h2') h2
+            input(type='text',name='h2',class='u-full-width',id='h2')
       .row
         .twelve.columns
           #aspect-ratio-wrapper
-            | Current aspect ratio #[span#aspect-ratio-suggestion]
+            | Current aspect ratio: #[span#aspect-ratio-suggestion]
   .row#info-wrapper
     .twelve.columns
       h2 arca
