@@ -40,10 +40,10 @@ html {
 
 body {
   height: 100%;
-  background-color: #90A3AD;
+  background-color: #2A2C2B;
   font-family: "Lato", sans-serif;
   font-weight: 200;
-  color: #83959F;
+  color: #ffffff;
 }
 
 a {
@@ -95,6 +95,11 @@ ul {
   text-transform: capitalize;
 }
 
+.subtitle {
+  font-size: 55%;
+  display: block;
+}
+
 .main-container {
   height: 100%;
   width: 100%;
@@ -102,21 +107,10 @@ ul {
 }
 .main-container .layout {
   position: absolute;
-  background-color: #ECECEC;
-  box-shadow: 1px 1px 15px 0 #646A6E;
+  background-color: #DC3522;
+  box-shadow: 4px 4px 10px 0 #1E1E20;
   max-width: 500px;
   padding: 40px 40px 25px;
-}
-.main-container .layout header {
-  position: relative;
-  margin-bottom: 25px;
-}
-.main-container .layout header #info-button {
-  position: absolute;
-  top: 15px;
-  right: 0;
-  font-size: 32px;
-  cursor: pointer;
 }
 .main-container .layout .input-wrapper {
   position: relative;
@@ -126,15 +120,17 @@ ul {
 .main-container .layout .input-wrapper label {
   position: absolute;
   left: 0;
+  font-weight: normal;
 }
 .main-container .layout .input-wrapper input {
-  background-color: #ECECEC;
+  background-color: transparent;
   border: none;
-  border-bottom: 2px solid #B3B3B3;
+  border-bottom: 2px solid #ffffff;
   border-radius: 0;
-  color: #83959F;
+  color: #ffffff;
   padding-left: 10px;
   margin: 0;
+  font-size: 1.5em;
 }
 .main-container .layout #calculator-wrapper {
   position: relative;
@@ -157,6 +153,12 @@ ul {
 }
 .main-container .layout footer {
   padding: 64px 0 0;
+  font-size: .9em;
+  position: relative;
+}
+.main-container .layout footer #info-button {
+  font-size: 32px;
+  cursor: pointer;
 }
 
 /* Landscape phones and down */

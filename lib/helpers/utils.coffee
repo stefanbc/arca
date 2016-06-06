@@ -1,30 +1,3 @@
-### Change views ###
-changeView = (button, newView) ->
-    currentView = $(button).attr 'data-view'
-    $(currentView).fadeOut ->
-        $(newView).fadeIn ->
-            $(button).attr 'data-view', "#{newView}"
-
-### Show a notice upon request ###
-notice = (text) ->
-    humane.log text,
-        timeout      : 5000
-        baseCls      : 'humane-libnotify'
-
-### Animate element ###
-animateElement = (element) ->
-    $(element).addClass 'pulse'
-    $(element).on 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', ->
-        $(this).removeClass 'pulse'
-        return
-
-### Change button icon ###
-changeIcon = (element, removedClass, addedClass) ->
-    if element is 'this'
-        $(this).removeClass(removedClass).addClass(addedClass)
-    else
-        $(element).removeClass(removedClass).addClass(addedClass)
-
 ### Check if variable is number ###
 isNumber = (obj) ->
     !isNaN(parseFloat(obj))
@@ -42,3 +15,25 @@ empty = (data) ->
         if data.hasOwnProperty(i)
             count++
     count == 0
+
+### Show a notice upon request ###
+notice = (text) ->
+    humane.log text,
+        timeout : 5000
+        baseCls : 'humane-libnotify'
+         
+### Change views ###
+changeView = (button, oldView, newView) ->
+    resetView = $(button).attr 'data-view'
+    if resetView
+        $(newView).fadeOut ->
+            $(resetView).fadeIn ->
+                $(button).attr 'data-view', ''
+    else
+        $(oldView).fadeOut ->
+            $(newView).fadeIn ->
+                $(button).attr 'data-view', "#{oldView}"
+
+### Change button icon ###
+changeIcon = (element, removedClass, addedClass) ->
+    $(element).removeClass(removedClass).addClass(addedClass)

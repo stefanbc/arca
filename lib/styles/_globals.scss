@@ -28,26 +28,30 @@ ul {
     padding: 0;
 }
 .text-left {
-  text-align: left;
+    text-align: left;
 }
 .text-right {
-  text-align: right;
+    text-align: right;
 }
 .text-center {
-  text-align: center;
+    text-align: center;
 }
 .text-justify {
-  text-align: justify;
+    text-align: justify;
 }
 .text-nowrap {
-  white-space: nowrap;
+    white-space: nowrap;
 }
 .text-lowercase {
-  text-transform: lowercase;
+    text-transform: lowercase;
 }
 .text-uppercase {
-  text-transform: uppercase;
+    text-transform: uppercase;
 }
 .text-capitalize {
-  text-transform: capitalize;
+    text-transform: capitalize;
+}
+.subtitle {
+    font-size: 55%;
+    display: block;
 }

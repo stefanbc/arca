@@ -8,21 +8,10 @@
     .layout {
         position: absolute;
         background-color: $color_1;
-        box-shadow: 1px 1px 15px 0 $color_3;
+        box-shadow: 4px 4px 10px 0 $color_3;
         max-width: 500px;
         padding: 40px 40px 25px;
         @extend %absolute-center;
-        header {
-            position: relative;
-            margin-bottom: 25px;
-            #info-button {
-                position: absolute;
-                top: 15px;
-                right: 0;
-                font-size: 32px;
-                cursor: pointer;
-            }
-        }
         .input-wrapper {
             position: relative;
             margin-bottom: 50px;
@@ -30,21 +19,22 @@
             label {
                 position: absolute;
                 left: 0;
+                font-weight: normal;
                 @extend %absolute-vertical-center;
             }
             input {
-                background-color: $color_1;
+                background-color: transparent;
                 border: none;
-                border-bottom: 2px solid $color_4;
+                border-bottom: 2px solid $color_2;
                 border-radius: 0;
                 color: $color_2;
                 padding-left: 10px;
                 margin: 0;
+                font-size: 1.5em;
             }
         }
         #calculator-wrapper {
             position: relative;
-            // display: none;
             #equal-sign {
                 position: absolute;
                 top: 25%;
@@ -69,6 +59,12 @@
         }
         footer {
             padding: 64px 0 0;
+            font-size: .9em;
+            position: relative;
+            #info-button {
+                font-size: 32px;
+                cursor: pointer;
+            }
         }
     }
 }
