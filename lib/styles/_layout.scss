@@ -14,8 +14,10 @@
         @extend %absolute-center;
         .input-wrapper {
             position: relative;
-            margin-bottom: 50px;
             padding-left: 25px;
+            &:first-child {
+                margin-bottom: 50px;
+            }
             label {
                 position: absolute;
                 left: 0;
@@ -31,15 +33,26 @@
                 padding-left: 10px;
                 margin: 0;
                 font-size: 1.5em;
+                height: 48px;
             }
         }
         #calculator-wrapper {
             position: relative;
             #equal-sign {
                 position: absolute;
-                top: 25%;
                 font-size: 32px;
-                @extend %absolute-horizontal-center;
+                @extend %absolute-center;
+            }
+            #aspect-ratio-buttons-wrapper {
+                margin-bottom: 35px;
+                .aspect-ratio-button {
+                    button {
+                        background: $color_2;
+                        border: none;
+                        margin: 0;
+                        color: $color_3;
+                    }
+                }
             }
             #original-values {
                 .input-wrapper {
@@ -51,14 +64,22 @@
                     margin-left: 50px;
                 }
             }
+            #aspect-ratio-wrapper {
+                margin-top: 35px;
+                #aspect-ratio-suggestion {
+                    font-size: 1.5em;
+                    vertical-align: middle;
+                    padding-left: 10px;
+                }
+            }
         }
         #info-wrapper {
             display: none;
-            min-height: 200px;
-            max-height: 200px;
+            min-height: 290px;
+            max-height: 290px;
         }
         footer {
-            padding: 64px 0 0;
+            margin-top: 35px;
             font-size: .9em;
             position: relative;
             #info-button {

@@ -1,16 +1,12 @@
 section.container.layout#default-layout
   .row#calculator-wrapper
     .twelve.columns
-      span#equal-sign =
-      .row.text-center
-        .three.columns
-          button 16:9
-        .three.columns
-          button 21:9
-        .three.columns
-          button 4:3
-        .three.columns
-          button 2:1
+      .row.text-center#aspect-ratio-buttons-wrapper
+        mixin buttons(...items)
+          each item in items
+            .three.columns.aspect-ratio-button
+              button.u-full-width= item
+        +buttons('16:9', '21:9', '4:3', '2:1')
       .row
         .one-half.column#original-values
           .input-wrapper
@@ -29,7 +25,7 @@ section.container.layout#default-layout
       .row
         .twelve.columns
           #aspect-ratio-wrapper
-            | Current aspect ratio: #[span#aspect-ratio-suggestion]
+            | Current aspect ratio: #[strong#aspect-ratio-suggestion]
   .row#info-wrapper
     .twelve.columns
       h2 arca

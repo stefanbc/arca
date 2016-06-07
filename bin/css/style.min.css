@@ -6,15 +6,6 @@ a {
   transition: all 0.5s ease;
 }
 
-.main-container .layout #calculator-wrapper #equal-sign {
-  left: 50%;
-  -webkit-transform: translateX(-50%);
-  -moz-transform: translateX(-50%);
-  -o-transform: translateX(-50%);
-  -ms-transform: translateX(-50%);
-  transform: translateX(-50%);
-}
-
 .main-container .layout .input-wrapper label {
   top: 50%;
   -webkit-transform: translateY(-50%);
@@ -24,7 +15,7 @@ a {
   transform: translateY(-50%);
 }
 
-.main-container .layout {
+.main-container .layout, .main-container .layout #calculator-wrapper #equal-sign {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -43,7 +34,7 @@ body {
   background-color: #2A2C2B;
   font-family: "Lato", sans-serif;
   font-weight: 200;
-  color: #ffffff;
+  color: #D9CB9E;
 }
 
 a {
@@ -114,8 +105,10 @@ ul {
 }
 .main-container .layout .input-wrapper {
   position: relative;
-  margin-bottom: 50px;
   padding-left: 25px;
+}
+.main-container .layout .input-wrapper:first-child {
+  margin-bottom: 50px;
 }
 .main-container .layout .input-wrapper label {
   position: absolute;
@@ -125,20 +118,29 @@ ul {
 .main-container .layout .input-wrapper input {
   background-color: transparent;
   border: none;
-  border-bottom: 2px solid #ffffff;
+  border-bottom: 2px solid #D9CB9E;
   border-radius: 0;
-  color: #ffffff;
+  color: #D9CB9E;
   padding-left: 10px;
   margin: 0;
   font-size: 1.5em;
+  height: 48px;
 }
 .main-container .layout #calculator-wrapper {
   position: relative;
 }
 .main-container .layout #calculator-wrapper #equal-sign {
   position: absolute;
-  top: 25%;
   font-size: 32px;
+}
+.main-container .layout #calculator-wrapper #aspect-ratio-buttons-wrapper {
+  margin-bottom: 35px;
+}
+.main-container .layout #calculator-wrapper #aspect-ratio-buttons-wrapper .aspect-ratio-button button {
+  background: #D9CB9E;
+  border: none;
+  margin: 0;
+  color: #1E1E20;
 }
 .main-container .layout #calculator-wrapper #original-values .input-wrapper {
   margin-right: 50px;
@@ -146,13 +148,21 @@ ul {
 .main-container .layout #calculator-wrapper #new-values .input-wrapper {
   margin-left: 50px;
 }
+.main-container .layout #calculator-wrapper #aspect-ratio-wrapper {
+  margin-top: 35px;
+}
+.main-container .layout #calculator-wrapper #aspect-ratio-wrapper #aspect-ratio-suggestion {
+  font-size: 1.5em;
+  vertical-align: middle;
+  padding-left: 10px;
+}
 .main-container .layout #info-wrapper {
   display: none;
-  min-height: 200px;
-  max-height: 200px;
+  min-height: 290px;
+  max-height: 290px;
 }
 .main-container .layout footer {
-  padding: 64px 0 0;
+  margin-top: 35px;
   font-size: .9em;
   position: relative;
 }
