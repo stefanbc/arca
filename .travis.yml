@@ -13,4 +13,6 @@ before_install:
   - gem install sass
 install: npm install
 before_script: grunt
-after_success: "chmod a+x deploy.sh"
+after_success: 
+  - chmod a+x deploy.sh
+  - ./deploy.sh
