@@ -20,7 +20,7 @@ module.exports = function(grunt) {
         jade: {
             build: {
                 files: {
-                    'index.html': 'lib/views/index.jade'
+                    'bin/index.html': 'lib/views/index.jade'
                 }
             }
         },
