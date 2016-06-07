@@ -1,6 +1,7 @@
 env:
   global:
   - ENCRYPTION_LABEL: 08dfceb9f496
+  - COMMIT_AUTHOR_EMAIL: "stefcosma@gmail.com"
 language: node_js
 node_js:
   - "5"
