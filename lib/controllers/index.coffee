@@ -4,3 +4,4 @@ $ ->
         changeView this, '#calculator-wrapper', '#info-wrapper'
     $('.aspect-ratio-button button').on 'click', ->
         setAspectRatio this
+    $('#values-wrapper input').keyup keyupEvent

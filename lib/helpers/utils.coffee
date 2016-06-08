@@ -2,6 +2,10 @@
 isNumber = (obj) ->
     !isNaN(parseFloat(obj))
 
+### Check if a value is a positive number ###
+isInteger = (value) ->
+    /^[0-9]+$/.test  value
+
 ### Check if variable is empty ###
 empty = (data) ->
     if typeof data is 'number' or typeof data is 'boolean'
@@ -15,12 +19,6 @@ empty = (data) ->
         if data.hasOwnProperty(i)
             count++
     count == 0
-
-### Show a notice upon request ###
-notice = (text) ->
-    humane.log text,
-        timeout : 5000
-        baseCls : 'humane-libnotify'
          
 ### Change views ###
 changeView = (button, oldView, newView) ->

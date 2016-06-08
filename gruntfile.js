@@ -87,7 +87,7 @@ module.exports = function(grunt) {
                 'lib/styles/*.scss',
                 'lib/views/*.jade'
             ],
-            tasks: ['clean:build', 'jade', 'sass:dev', 'coffee', 'uglify']
+            tasks: ['clean:build', 'jade', 'sass:dev', 'coffee']
         }
     });
     
