@@ -3,10 +3,7 @@ head
   meta(http-equiv='content-type', content='text/html;charset=utf-8')
   meta(name='viewport', content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no')
   meta(name='description', content='Simple calculate the aspect ratio!')
-  link(href='img/favicon.ico?v=0.0.1', rel='shortcut icon', type='image/x-icon')
-  link(href='//fonts.googleapis.com/css?family=Lato:400,300,700', rel='stylesheet', type='text/css')
-  link(href='//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', rel='stylesheet', type='text/css')
-  link(href='//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css', rel='stylesheet', type='text/css')
-  link(href='//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css', rel='stylesheet', type='text/css')
-  link(href='//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css', rel='stylesheet', type='text/css')
-  link(href='css/style.min.css', rel='stylesheet', type='text/css')
+  link(rel="prefetch shortcut icon" href='img/favicon.ico?v=0.0.1', type='image/x-icon')
+  - var stylesheets = ['//fonts.googleapis.com/css?family=Lato:400,300,700', '//cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css', '//cdnjs.cloudflare.com/ajax/libs/normalize/4.1.1/normalize.min.css', '//cdnjs.cloudflare.com/ajax/libs/animate.css/3.5.1/animate.min.css', '//cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.min.css', 'css/style.min.css'];
+  each val in stylesheets
+    link(rel='prefetch stylesheet' href='#{val}', type='text/css')

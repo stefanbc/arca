@@ -1,28 +1,24 @@
 ### Function to set the aspect ratio upon button press ###
 setAspectRatio = (getRatio) ->
-    ratio     = $(getRatio).text()
-    setWidth  = 0
-    setHeight = 0
-    switch ratio
-        when '16 : 9'
-            setWidth  = 1920
-            setHeight = 1080
-        when '21 : 9'
-            setWidth  = 2560
-            setHeight = 1080
-        when '4 : 3'
-            setWidth  = 1024
-            setHeight = 768
-        when '2 : 1'
-            setWidth  = 1024
-            setHeight = 512
-    $('#w1').val setWidth
-    $('#h1').val setHeight
+    ratio = $(getRatio).text()
+    width = height = 0
+
+    ratioArray = { 
+        '16 : 9' : '1920,1080',
+        '21 : 9' : '2560,1080',
+        '4 : 3'  : '1024,768',
+        '2 : 1'  : '1024,512'  
+    }
+    resolution = ratioArray[ratio].split ','
+    width  = resolution[0]
+    height = resolution[1]
+
+    $('#w1').val width
+    $('#h1').val height
     $('#aspect-ratio-suggestion').text ratio
 
 ### Function that calculates the aspect ratio ###
 calculateAspectRatio = (w2, h2, w1, h1) ->
-    value = undefined
     if 'undefined' != typeof w2
         value = Math.round(w2 / (w1 / h1))
     else if 'undefined' != typeof h2
@@ -30,35 +26,30 @@ calculateAspectRatio = (w2, h2, w1, h1) ->
     value
 
 ### Function to reduce to smallest, integer ratio using Euclid's Algorithm ###
-calculateReducedRatio = (numerator, denominator) ->
-    gcd     = undefined
-    temp    = undefined
-    divisor = undefined
-
+calculateReducedRatio = (width, height) ->
     gcd = (a, b) ->
         if b == 0
             return a
         gcd b, a % b
 
-    # take care of some simple cases
-    if !isInteger(numerator) or !isInteger(denominator)
+    if !isInteger(width) or !isInteger(height)
         return ''
-    if numerator == denominator
+    if width == height
         return '1 : 1'
-    # make sure numerator is always the larger number
-    if +numerator < +denominator
-        temp        = numerator
-        numerator   = denominator
-        denominator = temp
-    divisor = gcd(+numerator, +denominator)
-    if 'undefined' == typeof temp then numerator / divisor + ' : ' + denominator / divisor else denominator / divisor + ' : ' + numerator / divisor
+    if +width < +height
+        temp   = width
+        width  = height
+        height = temp
+
+    divisor = gcd(+width, +height)
+    if 'undefined' == typeof temp then width / divisor + ' : ' + height / divisor else height / divisor + ' : ' + width / divisor
 
 ### Function for onkeyup action ###
 keyupEvent = (event) ->
-    w1 = $('#values-wrapper input[name=w1]')
-    h1 = $('#values-wrapper input[name=h1]')
-    w2 = $('#values-wrapper input[name=w2]')
-    h2 = $('#values-wrapper input[name=h2]')
+    w1 = $('#w1')
+    h1 = $('#h1')
+    w2 = $('#w2')
+    h2 = $('#h2')
 
     w1v = w1.val()
     h1v = h1.val()

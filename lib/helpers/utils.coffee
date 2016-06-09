@@ -19,9 +19,16 @@ empty = (data) ->
         if data.hasOwnProperty(i)
             count++
     count == 0
-         
+
+### Animate element ###
+animateElement = (element) ->
+  $(element).addClass 'animated pulse'
+  $(element).on 'webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend', ->
+    $(this).removeClass 'animated pulse'
+
 ### Change views ###
 changeView = (button, oldView, newView) ->
+    animateElement button
     resetView = $(button).attr 'data-view'
     if resetView
         $(newView).fadeOut ->
@@ -30,7 +37,7 @@ changeView = (button, oldView, newView) ->
     else
         $(oldView).fadeOut ->
             $(newView).fadeIn ->
-                $(button).attr 'data-view', "#{oldView}"
+                $(button).attr 'data-view', oldView
 
 ### Change button icon ###
 changeIcon = (element, removedClass, addedClass) ->
