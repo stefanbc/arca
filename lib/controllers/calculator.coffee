@@ -15,6 +15,8 @@ setAspectRatio = (getRatio) ->
 
     $('#w1').val width
     $('#h1').val height
+    $('#w2').val ''
+    $('#h2').val ''
     $('#aspect-ratio-suggestion').text ratio
 
 ### Function that calculates the aspect ratio ###

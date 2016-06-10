@@ -11,6 +11,8 @@ body {
 	font-weight: 200;
     color: $color_2;
 }
+::-moz-selection { background: $color_3; }
+::selection { background: $color_3; }
 a {
 	text-decoration: none;
 	@extend %transition;
