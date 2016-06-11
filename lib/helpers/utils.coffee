@@ -38,6 +38,8 @@ changeView = (button, oldView, newView) ->
         $(oldView).fadeOut ->
             $(newView).fadeIn ->
                 $(button).attr 'data-view', oldView
+    analytics.track 'Changed view',
+        view: newView
 
 ### Change button icon ###
 changeIcon = (element, removedClass, addedClass) ->
