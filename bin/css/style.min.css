@@ -168,6 +168,13 @@ ul {
   vertical-align: middle;
   padding-left: 10px;
 }
+.main-container .layout #calculator-wrapper #reset-button {
+  text-align: center;
+  font-size: 1.3em;
+  cursor: pointer;
+  margin-top: 35px;
+  line-height: 36px;
+}
 .main-container .layout #info-wrapper {
   display: none;
   min-height: 290px;

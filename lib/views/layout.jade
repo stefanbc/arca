@@ -23,9 +23,10 @@ section.container.layout#default-layout
             label(for='h2') h2
             input(type='text',name='h2',class='u-full-width',id='h2')
       .row
-        .twelve.columns
-          #aspect-ratio-wrapper
-            | Current aspect ratio: #[strong#aspect-ratio-suggestion]
+        .eleven.columns#aspect-ratio-wrapper
+          | Current aspect ratio: #[strong#aspect-ratio-suggestion]
+        .one.column#reset-button
+          span.fa.fa-refresh
   .row#info-wrapper
     .twelve.columns
       h2 #{project_name}

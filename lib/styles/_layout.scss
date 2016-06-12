@@ -77,6 +77,13 @@
                     padding-left: 10px;
                 }
             }
+            #reset-button {
+                text-align: center;
+                font-size: 1.3em;
+                cursor: pointer;
+                margin-top: 35px;
+                line-height: 36px;
+            }
         }
         #info-wrapper {
             display: none;

@@ -39,6 +39,14 @@ changeView = (button, oldView, newView) ->
             $(newView).fadeIn '200', ->
                 $(button).attr 'data-view', oldView
 
+resetValues = (button, inputs) ->
+    $(button).addClass 'fa-spin'
+    $(inputs).val ''
+    setInterval (->
+        $(button).removeClass 'fa-spin'
+        return
+    ), 1000
+
 ### Change button icon ###
 changeIcon = (element, removedClass, addedClass) ->
     $(element).removeClass(removedClass).addClass(addedClass)
