@@ -14,7 +14,6 @@
         @extend %absolute-center;
         .input-wrapper {
             position: relative;
-            padding-left: 25px;
             &:first-child {
                 margin-bottom: 50px;
             }
@@ -30,9 +29,11 @@
                 border-bottom: 2px solid $color_2;
                 border-radius: 0;
                 color: $color_2;
-                padding-left: 10px;
+                padding-left: 25px;
+                padding-right: 0;
                 margin: 0;
                 font-size: 1.5em;
+                text-align: right;
                 height: 48px;
             }
         }
@@ -56,12 +57,12 @@
             }
             #original-values {
                 .input-wrapper {
-                    margin-right: 50px;
+                    margin-right: 25px;
                 }
             }
             #new-values {
                 .input-wrapper {
-                    margin-left: 50px;
+                    margin-left: 25px;
                 }
             }
             #aspect-ratio-wrapper {

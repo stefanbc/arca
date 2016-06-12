@@ -31,15 +31,13 @@ changeView = (button, oldView, newView) ->
     animateElement button
     resetView = $(button).attr 'data-view'
     if resetView
-        $(newView).fadeOut ->
-            $(resetView).fadeIn ->
+        $(newView).fadeOut '200', ->
+            $(resetView).fadeIn '200', ->
                 $(button).attr 'data-view', ''
     else
-        $(oldView).fadeOut ->
-            $(newView).fadeIn ->
+        $(oldView).fadeOut '200', ->
+            $(newView).fadeIn '200', ->
                 $(button).attr 'data-view', oldView
-    analytics.track 'Changed view',
-        view: newView
 
 ### Change button icon ###
 changeIcon = (element, removedClass, addedClass) ->

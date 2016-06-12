@@ -47,9 +47,10 @@ body {
 
 a {
   text-decoration: none;
+  color: #D9CB9E;
 }
 a:hover, a:focus {
-  text-decoration: underline;
+  color: #1E1E20;
 }
 
 h2 {
@@ -113,7 +114,6 @@ ul {
 }
 .main-container .layout .input-wrapper {
   position: relative;
-  padding-left: 25px;
 }
 .main-container .layout .input-wrapper:first-child {
   margin-bottom: 50px;
@@ -129,9 +129,11 @@ ul {
   border-bottom: 2px solid #D9CB9E;
   border-radius: 0;
   color: #D9CB9E;
-  padding-left: 10px;
+  padding-left: 25px;
+  padding-right: 0;
   margin: 0;
   font-size: 1.5em;
+  text-align: right;
   height: 48px;
 }
 .main-container .layout #calculator-wrapper {
@@ -151,10 +153,10 @@ ul {
   color: #1E1E20;
 }
 .main-container .layout #calculator-wrapper #original-values .input-wrapper {
-  margin-right: 50px;
+  margin-right: 25px;
 }
 .main-container .layout #calculator-wrapper #new-values .input-wrapper {
-  margin-left: 50px;
+  margin-left: 25px;
 }
 .main-container .layout #calculator-wrapper #aspect-ratio-wrapper {
   margin-top: 35px;
@@ -181,8 +183,5 @@ ul {
 
 /* Landscape phones and down */
 /* Landscape phone to portrait tablet */
-/* Portrait tablet to landscape and desktop */
-/* Default: 940px and up  */
-/* Large desktop */
 
 /*# sourceMappingURL=style.min.css.map */

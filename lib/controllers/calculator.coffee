@@ -18,10 +18,6 @@ setAspectRatio = (getRatio) ->
     $('#w2').val ''
     $('#h2').val ''
     $('#aspect-ratio-suggestion').text ratio
-    analytics.track 'Set Aspect Ratio',
-        ratio : ratio
-        width : width
-        height: height
 
 ### Function that calculates the aspect ratio ###
 calculateAspectRatio = (w2, h2, w1, h1) ->
@@ -64,10 +60,6 @@ keyupEvent = (event) ->
 
     ratio = calculateReducedRatio(w1v, h1v)
     $('#aspect-ratio-suggestion').text ratio
-    analytics.track 'Calculate Aspect Ratio',
-        ratio : ratio
-        width : w1v
-        height: h1v
 
     switch event.target
         when w1[0]

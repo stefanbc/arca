@@ -3,24 +3,29 @@ module.exports = function(grunt) {
     require('time-grunt')(grunt);
 
     grunt.initConfig({
-        pkg: grunt.file.readJSON('package.json'),
+        pkg: grunt.file.readJSON('./package.json'),
         
         clean: {
             build: {
                 src: [
-                    'bin/css/*',
-                    'bin/js/app.min.js'
+                    './bin/css/*',
+                    './bin/js/app.min.js'
                 ]
             },
             test: {
-                src: ['bin/js/app.min.js']
+                src: ['./bin/js/app.min.js']
             }
         },
         
         jade: {
             build: {
+                options: {
+                    data: function(dest, src) {
+                        return require('./lib/settings.json');
+                    }
+                },
                 files: {
-                    'bin/index.html': 'lib/views/index.jade'
+                    './bin/index.html': './lib/views/index.jade'
                 }
             }
         },
@@ -32,7 +37,7 @@ module.exports = function(grunt) {
                     sourcemap : 'none'
                 },
                 files: {
-                    'bin/css/style.min.css' : 'lib/styles/index.scss'
+                    './bin/css/style.min.css' : './lib/styles/index.scss'
                 }
             },
             dev: {
@@ -40,7 +45,7 @@ module.exports = function(grunt) {
                     style     : 'expanded'
                 },
                 files: {
-                    'bin/css/style.min.css' : 'lib/styles/index.scss'
+                    './bin/css/style.min.css' : './lib/styles/index.scss'
                 }
             }
         },
@@ -51,10 +56,10 @@ module.exports = function(grunt) {
                     join : true
                 },
                 files: {
-                    'bin/js/app.min.js': 
+                    './bin/js/app.min.js': 
                     [
-                        'lib/helpers/*.coffee', 
-                        'lib/controllers/*.coffee'
+                        './lib/helpers/*.coffee', 
+                        './lib/controllers/*.coffee'
                     ]
                 }
             }  
@@ -63,13 +68,13 @@ module.exports = function(grunt) {
         uglify: {
             build: {
                 files: {
-                    'bin/js/app.min.js': ['bin/js/app.min.js']
+                    './bin/js/app.min.js': ['./bin/js/app.min.js']
                 }
             }
         },
         
         jshint: {
-            files: ['gruntfile.js', 'bin/js/app.min.js'],
+            files: ['gruntfile.js', './bin/js/app.min.js'],
             options: {
                 globals: {
                     jQuery: true
@@ -82,10 +87,10 @@ module.exports = function(grunt) {
                 atBegin: true
             },
             files: [
-                'lib/helpers/*.coffee',
-                'lib/controllers/*.coffee',
-                'lib/styles/*.scss',
-                'lib/views/*.jade'
+                './lib/helpers/*.coffee',
+                './lib/controllers/*.coffee',
+                './lib/styles/*.scss',
+                './lib/views/*.jade'
             ],
             tasks: ['clean:build', 'jade', 'sass:dev', 'coffee']
         }

@@ -15,10 +15,11 @@ body {
 ::selection { background: $color_3; }
 a {
 	text-decoration: none;
+    color: $color_2;
 	@extend %transition;
 	&:hover,
 	&:focus {
-		text-decoration: underline;
+        color: $color_3;
 	}
 }
 h2 {
