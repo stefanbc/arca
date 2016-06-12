@@ -1,4 +1,4 @@
-a {
+a, .main-container .layout #calculator-wrapper #aspect-ratio-buttons-wrapper .aspect-ratio-button button {
   -webkit-transition: all 0.5s ease;
   -moz-transition: all 0.5s ease;
   -o-transition: all 0.5s ease;
@@ -120,7 +120,7 @@ ul {
 }
 .main-container .layout .input-wrapper label {
   position: absolute;
-  left: 0;
+  right: 0;
   font-weight: normal;
 }
 .main-container .layout .input-wrapper input {
@@ -129,11 +129,10 @@ ul {
   border-bottom: 2px solid #D9CB9E;
   border-radius: 0;
   color: #D9CB9E;
-  padding-left: 25px;
-  padding-right: 0;
+  padding-right: 25px;
+  padding-left: 0;
   margin: 0;
   font-size: 1.5em;
-  text-align: right;
   height: 48px;
 }
 .main-container .layout #calculator-wrapper {
@@ -147,10 +146,13 @@ ul {
   margin-bottom: 35px;
 }
 .main-container .layout #calculator-wrapper #aspect-ratio-buttons-wrapper .aspect-ratio-button button {
-  background: #D9CB9E;
-  border: none;
+  border: 2px solid #D9CB9E;
   margin: 0;
+  color: #D9CB9E;
+}
+.main-container .layout #calculator-wrapper #aspect-ratio-buttons-wrapper .aspect-ratio-button button:hover, .main-container .layout #calculator-wrapper #aspect-ratio-buttons-wrapper .aspect-ratio-button button:focus {
   color: #1E1E20;
+  background: #D9CB9E;
 }
 .main-container .layout #calculator-wrapper #original-values .input-wrapper {
   margin-right: 25px;

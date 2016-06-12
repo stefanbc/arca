@@ -19,7 +19,7 @@
             }
             label {
                 position: absolute;
-                left: 0;
+                right: 0;
                 font-weight: normal;
                 @extend %absolute-vertical-center;
             }
@@ -29,11 +29,10 @@
                 border-bottom: 2px solid $color_2;
                 border-radius: 0;
                 color: $color_2;
-                padding-left: 25px;
-                padding-right: 0;
+                padding-right: 25px;
+                padding-left: 0;
                 margin: 0;
                 font-size: 1.5em;
-                text-align: right;
                 height: 48px;
             }
         }
@@ -48,10 +47,15 @@
                 margin-bottom: 35px;
                 .aspect-ratio-button {
                     button {
-                        background: $color_2;
-                        border: none;
+                        border: 2px solid $color_2;
                         margin: 0;
-                        color: $color_3;
+                        color: $color_2;
+                        @extend %transition;
+                        &:hover,
+                        &:focus {
+                            color: $color_3;
+                            background: $color_2;
+                        }
                     }
                 }
             }
