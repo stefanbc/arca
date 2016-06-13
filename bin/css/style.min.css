@@ -15,7 +15,7 @@ a, .main-container .layout #calculator-wrapper #aspect-ratio-buttons-wrapper .as
   transform: translateY(-50%);
 }
 
-.main-container .layout, .main-container .layout #calculator-wrapper #equal-sign {
+.main-container .layout, .main-container .layout #calculator-wrapper #values-wrapper #original-values:after {
   top: 50%;
   left: 50%;
   -webkit-transform: translate(-50%, -50%);
@@ -129,21 +129,10 @@ ul {
   border-bottom: 2px solid #D9CB9E;
   border-radius: 0;
   color: #D9CB9E;
-  padding-right: 25px;
-  padding-left: 0;
+  padding: 0 25px 0 0;
   margin: 0;
   font-size: 1.5em;
   height: 48px;
-}
-.main-container .layout #calculator-wrapper {
-  position: relative;
-}
-.main-container .layout #calculator-wrapper #equal-sign {
-  position: absolute;
-  font-size: 32px;
-}
-.main-container .layout #calculator-wrapper #aspect-ratio-buttons-wrapper {
-  margin-bottom: 35px;
 }
 .main-container .layout #calculator-wrapper #aspect-ratio-buttons-wrapper .aspect-ratio-button button {
   border: 2px solid #D9CB9E;
@@ -154,16 +143,25 @@ ul {
   color: #1E1E20;
   background: #D9CB9E;
 }
-.main-container .layout #calculator-wrapper #original-values .input-wrapper {
+.main-container .layout #calculator-wrapper #values-wrapper {
+  position: relative;
+  margin: 20px 0;
+  padding: 5px 0 25px 0;
+}
+.main-container .layout #calculator-wrapper #values-wrapper #original-values:after {
+  content: "";
+  display: block;
+  border: 1px solid #D9CB9E;
+  height: 100%;
+  position: absolute;
+}
+.main-container .layout #calculator-wrapper #values-wrapper #original-values .input-wrapper {
   margin-right: 25px;
 }
-.main-container .layout #calculator-wrapper #new-values .input-wrapper {
+.main-container .layout #calculator-wrapper #values-wrapper #new-values .input-wrapper {
   margin-left: 25px;
 }
-.main-container .layout #calculator-wrapper #aspect-ratio-wrapper {
-  margin-top: 35px;
-}
-.main-container .layout #calculator-wrapper #aspect-ratio-wrapper #aspect-ratio-suggestion {
+.main-container .layout #calculator-wrapper #aspect-ratio-suggestion {
   font-size: 1.5em;
   vertical-align: middle;
   padding-left: 10px;
@@ -172,13 +170,16 @@ ul {
   text-align: center;
   font-size: 1.3em;
   cursor: pointer;
-  margin-top: 35px;
   line-height: 36px;
 }
 .main-container .layout #info-wrapper {
   display: none;
   min-height: 290px;
   max-height: 290px;
+}
+.main-container .layout #info-wrapper #version {
+  font-size: 40%;
+  padding-left: 5px;
 }
 .main-container .layout footer {
   margin-top: 35px;
@@ -187,7 +188,7 @@ ul {
 }
 .main-container .layout footer #info-button {
   font-size: 32px;
-  cursor: pointer;
+  cursor: help;
 }
 
 /* Landscape phones and down */

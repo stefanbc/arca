@@ -29,22 +29,14 @@
                 border-bottom: 2px solid $color_2;
                 border-radius: 0;
                 color: $color_2;
-                padding-right: 25px;
-                padding-left: 0;
+                padding: 0 25px 0 0;
                 margin: 0;
                 font-size: 1.5em;
                 height: 48px;
             }
         }
         #calculator-wrapper {
-            position: relative;
-            #equal-sign {
-                position: absolute;
-                font-size: 32px;
-                @extend %absolute-center;
-            }
             #aspect-ratio-buttons-wrapper {
-                margin-bottom: 35px;
                 .aspect-ratio-button {
                     button {
                         border: 2px solid $color_2;
@@ -59,29 +51,38 @@
                     }
                 }
             }
-            #original-values {
-                .input-wrapper {
-                    margin-right: 25px;
+            #values-wrapper {
+                position: relative;
+                margin: 20px 0;
+                padding: 5px 0 25px 0;
+                #original-values {
+                    &:after {
+                        content: "";
+                        display: block;
+                        border: 1px solid $color_2;
+                        height: 100%;
+                        position: absolute;
+                        @extend %absolute-center;
+                    }
+                    .input-wrapper {
+                        margin-right: 25px;
+                    }
+                }
+                #new-values {
+                    .input-wrapper {
+                        margin-left: 25px;
+                    }
                 }
             }
-            #new-values {
-                .input-wrapper {
-                    margin-left: 25px;
-                }
-            }
-            #aspect-ratio-wrapper {
-                margin-top: 35px;
-                #aspect-ratio-suggestion {
-                    font-size: 1.5em;
-                    vertical-align: middle;
-                    padding-left: 10px;
-                }
+            #aspect-ratio-suggestion {
+                font-size: 1.5em;
+                vertical-align: middle;
+                padding-left: 10px;
             }
             #reset-button {
                 text-align: center;
                 font-size: 1.3em;
                 cursor: pointer;
-                margin-top: 35px;
                 line-height: 36px;
             }
         }
@@ -89,6 +90,10 @@
             display: none;
             min-height: 290px;
             max-height: 290px;
+            #version {
+                font-size: 40%;
+                padding-left: 5px;
+            }
         }
         footer {
             margin-top: 35px;
@@ -96,7 +101,7 @@
             position: relative;
             #info-button {
                 font-size: 32px;
-                cursor: pointer;
+                cursor: help;
             }
         }
     }

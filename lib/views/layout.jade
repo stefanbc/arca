@@ -30,7 +30,7 @@ section.container.layout#default-layout
   .row#info-wrapper
     .twelve.columns
       h2 #{project_name}
-        sub #{project_version}
+        span#version #{project_version}
         span.subtitle #{project_oneliner}
       p You can use this calculator to find the missing value for a particular aspect ratio. The formula behind it is:
       p
@@ -41,5 +41,5 @@ section.container.layout#default-layout
         .twelve.columns
           span.fa.fa-ellipsis-h#info-button
       a(href='#{project_url}' target='_blank') &lt;code&gt;
-      | by
+      | &nbsp;by&nbsp;
       a(href='#{author_url}' target='_blank') #{author_name}
