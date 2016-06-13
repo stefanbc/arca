@@ -39,9 +39,10 @@ changeView = (button, oldView, newView) ->
             $(newView).fadeIn '200', ->
                 $(button).attr 'data-view', oldView
 
-resetValues = (button, inputs) ->
+resetValues = (button, inputs, ratio_suggestion) ->
     $(button).addClass 'fa-spin'
     $(inputs).val ''
+    $(ratio_suggestion).text ''
     setInterval (->
         $(button).removeClass 'fa-spin'
         return

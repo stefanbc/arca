@@ -6,4 +6,4 @@ $ ->
         setAspectRatio this
     $('#values-wrapper input').keyup keyupEvent
     $('#reset-button span').on 'click', ->
-        resetValues this, '#values-wrapper input'
+        resetValues this, '#values-wrapper input', '#aspect-ratio-suggestion'
