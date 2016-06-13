@@ -79,6 +79,9 @@
                 vertical-align: middle;
                 padding: 0 10px;
                 border-bottom: 2px dotted $color_2;
+                min-width: 40px;
+                display: inline-block;
+                text-align: center;
             }
             #reset-button {
                 text-align: center;
