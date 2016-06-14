@@ -32,9 +32,10 @@ section.container.layout#default-layout
       h2 #{project_name}
         span#version #{project_version}
         span.subtitle #{project_oneliner}
-      p You can use this calculator to find the missing value for a particular aspect ratio. The formula behind it is:
+      p While resizing images, use this calculator to preserve their aspect ratio. The formula used by this app is:
       p
-        em (original height / original width) x new width = new height
+        em (h1 / w1) x w2 = h2
+      p Where h1 is the original height, w1 is the original width, w2 is the new width and h2 is the new height.
   footer.row.text-center#copy
     .twelve.columns
       .row
