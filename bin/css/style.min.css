@@ -166,6 +166,10 @@ ul {
   vertical-align: middle;
   padding: 0 10px;
   border-bottom: 2px dotted #D9CB9E;
+  min-width: 40px;
+  height: 36px;
+  display: inline-block;
+  text-align: center;
 }
 .main-container .layout #calculator-wrapper #reset-button {
   text-align: center;
@@ -175,8 +179,8 @@ ul {
 }
 .main-container .layout #info-wrapper {
   display: none;
-  min-height: 290px;
-  max-height: 290px;
+  min-height: 292px;
+  max-height: 292px;
 }
 .main-container .layout #info-wrapper #version {
   font-size: 40%;
