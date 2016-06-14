@@ -19,6 +19,8 @@ Installation
 
 Just download the latest release and place it on your local or web server.
 
+Preview a demo [HERE](http://stefanbc.github.io/arca).
+
 Requirements
 --
 
