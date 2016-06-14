@@ -1,6 +1,6 @@
 {
   "name": "arca",
-  "version": "0.0.1",
+  "version": "0.9.1",
   "description": "a simple aspect ratio calculator",
   "devDependencies": {
     "grunt": "^1.0.1",
