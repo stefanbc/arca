@@ -3,7 +3,7 @@ arca
 
 [![Build Status](https://travis-ci.org/stefanbc/arca.svg?branch=master)](https://travis-ci.org/stefanbc/arca) [![Dependency Status](https://www.versioneye.com/user/projects/57548c067757a00034dc42c4/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57548c067757a00034dc42c4)
 
-A simple aspect ratio calculator.
+A simple aspect ratio calculator
 --
 
 While resizing images, use this calculator to preserve their aspect ratio. The formula used by this app is:
