@@ -17,7 +17,7 @@ Where h1 is the original height, w1 is the original width, w2 is the new width a
 Installation
 --
 
-Just download the latest release and place it on your local or web server.
+Just download the latest release and place the contents of the `bin` folder on your local or web server.
 
 Preview a demo [HERE](http://stefanbc.github.io/arca).
 
