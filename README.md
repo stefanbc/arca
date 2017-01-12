@@ -1,7 +1,7 @@
 arca
 =======
 
-[![Build Status](https://travis-ci.org/stefanbc/arca.svg?branch=master)](https://travis-ci.org/stefanbc/arca) [![Dependency Status](https://www.versioneye.com/user/projects/57548c067757a00034dc42c4/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57548c067757a00034dc42c4) [![Code Climate](https://codeclimate.com/github/stefanbc/arca/badges/gpa.svg)](https://codeclimate.com/github/stefanbc/arca) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
+[![Build Status](https://travis-ci.org/stefanbc/arca.svg?branch=master)](https://travis-ci.org/stefanbc/arca) [![Dependency Status](https://www.versioneye.com/user/projects/57548c067757a00034dc42c4/badge.svg?style=flat)](https://www.versioneye.com/user/projects/57548c067757a00034dc42c4) [![Code Climate](https://codeclimate.com/github/stefanbc/arca/badges/gpa.svg)](https://codeclimate.com/github/stefanbc/arca) [![codecov](https://codecov.io/gh/stefanbc/arca/branch/master/graph/badge.svg)](https://codecov.io/gh/stefanbc/arca) [![Built with Grunt](https://cdn.gruntjs.com/builtwith.svg)](http://gruntjs.com/)
 
 A simple aspect ratio calculator
 --
