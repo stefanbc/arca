@@ -1,0 +1,7 @@
+head
+  title=`${project_name} - ${project_oneliner}`
+  include ./meta
+  link(rel="prefetch shortcut icon" href=`../images/favicon.ico`, type='image/x-icon')
+  - var stylesheets = ['//fonts.googleapis.com/css?family=Lato:400,300,700', '//use.fontawesome.com/releases/v5.8.1/css/all.css', '../scss/main.scss', '../scss/vendor.scss'];
+  each val in stylesheets
+    link(rel='prefetch stylesheet' href=val, type='text/css')

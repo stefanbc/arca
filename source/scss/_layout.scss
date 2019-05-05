@@ -2,88 +2,101 @@
 // Layout and UI
 // --------------------------------------------------
 .main-container {
-	height: 100%;
-	width: 100%;
-	position: relative;
+    height: 100%;
+    width: 100%;
+    position: relative;
+
     .layout {
         position: absolute;
-        background-color: $color_1;
-        box-shadow: 4px 4px 10px 0 $color_3;
+        background-color: $color-1;
+        box-shadow: 4px 4px 10px 0 $color-3;
         max-width: 500px;
         padding: 40px 40px 25px;
         @extend %absolute-center;
+
         .input-wrapper {
             position: relative;
+
             &:first-child {
                 margin-bottom: 50px;
             }
+
             label {
                 position: absolute;
                 right: 0;
                 font-weight: normal;
                 @extend %absolute-vertical-center;
             }
+
             input {
                 background-color: transparent;
-                border: none;
-                border-bottom: 2px solid $color_2;
+                border: 0;
+                border-bottom: 2px solid $color-2;
                 border-radius: 0;
-                color: $color_2;
+                color: $color-2;
                 padding: 0 25px 0 0;
                 margin: 0;
                 font-size: 1.5em;
                 height: 48px;
             }
         }
+
         #calculator-wrapper {
             #aspect-ratio-buttons-wrapper {
                 .aspect-ratio-button {
                     button {
-                        border: 2px solid $color_2;
+                        border: 2px solid $color-2;
                         margin: 0;
-                        color: $color_2;
+                        color: $color-2;
                         @extend %transition;
+
                         &:hover,
                         &:focus {
-                            color: $color_3;
-                            background: $color_2;
+                            color: $color-3;
+                            background: $color-2;
                         }
                     }
                 }
             }
+
             #values-wrapper {
                 position: relative;
                 margin: 20px 0;
-                padding: 5px 0 25px 0;
+                padding: 5px 0 25px;
+
                 #original-values {
-                    &:after {
-                        content: "";
+                    &::after {
+                        content: '';
                         display: block;
-                        border: 1px solid $color_2;
+                        border: 1px solid $color-2;
                         height: 100%;
                         position: absolute;
                         @extend %absolute-center;
                     }
+
                     .input-wrapper {
                         margin-right: 25px;
                     }
                 }
+
                 #new-values {
                     .input-wrapper {
                         margin-left: 25px;
                     }
                 }
             }
+
             #aspect-ratio-suggestion {
                 font-size: 1.5em;
                 vertical-align: middle;
                 padding: 0 10px;
-                border-bottom: 2px dotted $color_2;
+                border-bottom: 2px dotted $color-2;
                 min-width: 40px;
                 height: 36px;
                 display: inline-block;
                 text-align: center;
             }
+
             #reset-button {
                 text-align: center;
                 font-size: 1.3em;
@@ -91,19 +104,23 @@
                 line-height: 36px;
             }
         }
+
         #info-wrapper {
             display: none;
             min-height: 292px;
             max-height: 292px;
+
             #version {
                 font-size: 40%;
                 padding-left: 5px;
             }
         }
+
         footer {
             margin-top: 35px;
             font-size: .9em;
             position: relative;
+
             #info-button {
                 font-size: 32px;
                 cursor: help;

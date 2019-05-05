@@ -32,19 +32,20 @@
   },
   "homepage": "https://github.com/stefanbc/arca#readme",
   "scripts": {
-    "clean": "rimraf ./assets/css && rimraf ./assets/js",
-    "mkdir": "mkdir -p ./assets/css && mkdir -p ./assets/js",
-    "build-css-dev": "parcel ./assets/scss/index.scss ./assets/scss/vendor.scss --no-source-maps -d ./assets/css",
-    "build-css-prod": "parcel build ./assets/scss/index.scss ./assets/scss/vendor.scss --no-source-maps -d ./assets/css",
-    "build-js-dev": "parcel ./assets/source/index.coffee --no-source-maps -d ./assets/js",
-    "build-js-prod": "parcel build ./assets/source/index.coffee --no-source-maps -d ./assets/js",
-    "build-pug-dev": "parcel ./assets/views/index.pug --no-source-maps -d ./",
-    "build-pug-prod": "parcel build ./assets/views/index.pug --no-source-maps -d ./",
-    "watch": "parcel watch ./assets/scss/*.scss --no-source-maps -d ./assets/css",
-    "dev": "yarn clean && yarn mkdir && yarn build-css-dev && yarn build-js-dev && yarn build-pug-dev",
-    "prod": "yarn clean && yarn mkdir && yarn build-css-prod && yarn build-js-prod && yarn build-pug-prod"
+    "clean": "rimraf ./docs",
+    "mkdir": "mkdir -p ./docs",
+    "build-css-dev": "parcel ./source/scss/index.scss ./source/scss/vendor.scss --no-source-maps -d ./docs/",
+    "build-css-prod": "parcel build ./source/scss/index.scss ./source/scss/vendor.scss --no-source-maps -d ./docs/",
+    "build-js-dev": "parcel ./source/js/index.js --no-source-maps -d ./docs/",
+    "build-js-prod": "parcel build ./source/js/index.js --no-source-maps -d ./docs/",
+    "build-pug-dev": "parcel ./source/views/index.pug --no-source-maps -d ./docs",
+    "build-pug-prod": "parcel build ./source/views/index.pug --no-source-maps -d ./docs",
+    "watch": "parcel watch ./source/**/* --no-source-maps -d ./docs/",
+    "dev": "yarn clean && yarn mkdir && yarn build-pug-dev",
+    "prod": "yarn clean && yarn mkdir && yarn build-pug-prod"
   },
   "dependencies": {
+    "animate.css": "^3.7.0",
     "normalize.css": "^8.0.1",
     "skeleton.css": "^2.0.4"
   },
@@ -52,7 +53,7 @@
     "parcel-bundler": "^1.12.3",
     "pug": "^2.0.3",
     "rimraf": "^2.6.3",
-    "sass": "^1.19.0",
+    "sass": "^1.20.1",
     "serve": "^11.0.0"
   }
 }

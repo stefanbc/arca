@@ -2,58 +2,72 @@
 // Global
 // --------------------------------------------------
 html {
-	height: 100%;
+    height: 100%;
 }
+
 body {
-	height: 100%;
-    background-color: $color_0;
-	font-family: $font_0;
-	font-weight: 200;
-    color: $color_2;
+    height: 100%;
+    background-color: $color-0;
+    font-family: $font-0;
+    font-weight: 200;
+    color: $color-2;
 }
-::-moz-selection { background: $color_3; }
-::selection { background: $color_3; }
+
+::selection { background: $color-3; }
+
 a {
-	text-decoration: none;
-    color: $color_2;
-	@extend %transition;
-	&:hover,
-	&:focus {
-        color: $color_3;
-	}
+    text-decoration: none;
+    color: $color-2;
+    @extend %transition;
+
+    &:hover,
+    &:focus {
+        color: $color-3;
+    }
 }
+
 h2 {
     font-weight: lighter;
 }
+
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
 }
+
 .text-left {
     text-align: left;
 }
+
 .text-right {
     text-align: right;
 }
+
 .text-center {
     text-align: center;
 }
+
 .text-justify {
     text-align: justify;
 }
+
 .text-nowrap {
     white-space: nowrap;
 }
+
 .text-lowercase {
     text-transform: lowercase;
 }
+
 .text-uppercase {
     text-transform: uppercase;
 }
+
 .text-capitalize {
     text-transform: capitalize;
 }
+
 .subtitle {
     font-size: 55%;
     display: block;

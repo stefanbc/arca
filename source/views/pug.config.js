@@ -8,6 +8,6 @@ module.exports = {
         project_url : "https://github.com/stefanbc/arca",
         project_version : "1.0.0",
         app_url : "http://stefanbc.github.io/arca",
-        app_logo : "./assets/images/logo.png"
+        app_logo : "../images/logo.png"
     }
 };

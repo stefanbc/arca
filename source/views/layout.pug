@@ -26,12 +26,12 @@ section.container.layout#default-layout
         .eleven.columns#aspect-ratio-wrapper
           | Current aspect ratio: #[strong#aspect-ratio-suggestion]
         .one.column#reset-button
-          span.fa.fa-refresh
+          span.fas.fa-sync
   .row#info-wrapper
     .twelve.columns
-      h2 #{project_name}
-        span#version #{project_version}
-        span.subtitle #{project_oneliner}
+      h2=project_name
+        span#version=project_version
+        span.subtitle=project_oneliner
       p While resizing images, use this calculator to preserve their aspect ratio. The formula used by this app is:
       p
         em (h1 / w1) x w2 = h2
@@ -40,7 +40,7 @@ section.container.layout#default-layout
     .twelve.columns
       .row
         .twelve.columns
-          span.fa.fa-ellipsis-h#info-button
-      a(href='#{project_url}' target='_blank') &lt;code&gt;
+          span.fas.fa-ellipsis-h#info-button
+      a(href=project_url target='_blank') &lt;code&gt;
       | &nbsp;by&nbsp;
-      a(href='#{author_url}' target='_blank') #{author_name}
+      a(href=author_url target='_blank')=author_name
